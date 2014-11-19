@@ -9,7 +9,7 @@ VALUE X11HashEngine = Qnil;
 #endif
 
 // x11 hashing function
-static VALUE method_x11_hash(VALUE self, VALUE input) {
+VALUE method_x11_hash(VALUE self, VALUE input) {
     const char * c_input = RSTRING_PTR(input);
 
     char * c_output;
