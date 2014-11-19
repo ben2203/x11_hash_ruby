@@ -12,7 +12,7 @@ VALUE X11HashEngine = Qnil;
 VALUE method_x11_hash(VALUE self, VALUE input) {
     const char * c_input = RSTRING_PTR(input);
 
-    char * c_output;
+    char c_output[32];
     x11_hash(c_input, c_output);
 
     return rb_str_new2(c_output);
